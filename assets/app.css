@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-family: "helvetica neue";
+}
+
+h1,h3,h4 {
+    font-family: "helvetica neue";
+    font-weight: 300;
+}
+
+
+.main {
+  color: black;
+  font-family: "helvetica neue";
+  font-weight: 300;
+}
+
+.list {
+  font-weight: 300;
+  list-style-position: outside;
+}

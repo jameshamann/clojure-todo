@@ -1,0 +1,24 @@
+(page "index.html")
+
+(html
+  (head
+    (link :href "app.css" :rel "stylesheet" :type "text/css"))
+  (body
+    (h1 "Clojure Todo App")
+    (h3 "Built using Hoplon")
+
+    ((defelem todo-list [{:keys [title]} _]
+      (let [todo-items (cell [])
+        new-item   (cell "")]
+    (div :class "main"
+      (h4 "Todo List")
+      (ul
+        (loop-tpl :bindings [todo todo-items]
+          (li :class "list" todo)))
+      (input :type "text"
+             :value new-item
+             :change #(reset! new-item @%))
+      (button :click #(dosync
+                       (swap! todo-items conj @new-item)
+                       (reset! new-item ""))
+        (text "Add #~{(inc (count todo-items))}"))))))))
