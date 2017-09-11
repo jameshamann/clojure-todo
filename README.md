@@ -33,11 +33,8 @@ A [Hoplon][3] project designed to...well, that part is up to you.
 2. The compiled files will be on the `target/` directory. This will use
    advanced compilation and prerender the html.
 
-## License
 
-Copyright © 2017, **Your Name Goes Here**
 
 [1]: http://boot-clj.com
 [2]: http://localhost:8000
 [3]: http://hoplon.io
-#Simple Clojure ToDo App
